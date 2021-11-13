@@ -20,7 +20,9 @@ namespace MyPortfolio
         {
             Projects.Add(project);
         }
-
-
+        public static void RemoveByName(string name)
+        {
+            Projects.RemoveAll(p => p.Name == name);
+        }
     }
 }

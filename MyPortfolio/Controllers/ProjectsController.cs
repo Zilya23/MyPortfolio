@@ -23,6 +23,11 @@ namespace MyPortfolio.Controllers
             ProjectStorage.Add(project);
             return RedirectToAction("Index");
         }
-        
+
+        public IActionResult Remove(string name)
+        {
+            ProjectStorage.RemoveByName(name);
+            return RedirectToAction("Index");
+        }
     }
 }
